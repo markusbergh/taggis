@@ -1,0 +1,44 @@
+{
+  "name": "taggis",
+  "version": "1.0.0",
+  "description": "A tagcloud based upon Twitter hashtags.",
+  "main": "server.js",
+  "private": true,
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.5.8"
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others 'npm run dev:sass' 'npm run dev:server'",
+    "dev:sass": "node-sass --watch app/sass/app.scss app/public/css/app.css",
+    "dev:server": "nodemon app/server.js",
+    "start": "npm run start:compile && npm run start:server",
+    "start:compile": "node-sass app/sass/app.scss app/public/css/app.css",
+    "start:server": "node app/server.js",
+    "test": "mocha tests/**/*.spec.js"
+  },
+  "keywords": [
+    "tag",
+    "cloud",
+    "twitter"
+  ],
+  "author": "Markus Bergh",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "node-fetch": "^2.0.0",
+    "node-sass": "^4.7.2",
+    "oauth": "^0.9.15",
+    "pug": "^2.0.0-rc.4",
+    "wordcloud": "^1.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "concurrently": "^3.5.1",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.14.12"
+  }
+}

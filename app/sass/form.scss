@@ -1,0 +1,23 @@
+@import "settings/variables";
+
+.fieldset {
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: $color__fieldset_background;
+}
+
+.form {
+	height: 30%;
+
+	.center-aligned {
+  	flex-direction: column;
+	}
+
+	.form_submit {
+		margin-left: 10px;
+	}
+
+	.form_input {
+		margin-left: 10px;
+	}
+}

@@ -1,0 +1,10 @@
+@import "settings/variables";
+
+.tagcloud {
+  background-color: $color__tagcloud_background;
+  height: 70%;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+}

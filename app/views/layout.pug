@@ -1,0 +1,21 @@
+html
+  head
+    title Taggis | Markus Bergh
+    link(rel="stylesheet", href="/css/app.css")
+
+  body
+    block header
+      include sections/header.pug
+
+    block content
+
+    block footer
+      include sections/footer.pug
+
+    if data
+      script(type="text/javascript").
+        //- For client to pick up
+        window.__DATA__ = !{data}
+
+    script(src='/js/vendor/wordcloud2.js')
+    script(src='/js/app.js')

@@ -1,0 +1,14 @@
+form(action="/svtagcloud/retrieve", method="POST").center-aligned
+  fieldset.fieldset
+    legend Generate from Twitter
+    label Hashtag:
+      input(type="text", name="hashtag", value=query).form_input
+    input(type="submit", value="Submit").form_submit
+  
+    //-
+      div(style={"margin-top": "10px"}).source
+        span.source_label Use source:
+        label Twitter
+          input(type="radio", name="source", value="twitter" checked="checked")
+        label RSS
+          input(type="radio", name="source", value="rss")

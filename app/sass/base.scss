@@ -1,0 +1,47 @@
+@import "settings/variables";
+
+body {
+  margin: 0;
+  background-color: $color__body_background;
+}
+
+.center-aligned {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header {
+  height: $height__section_header;
+}
+
+.footer {
+  height: $height__section_footer;
+
+  .contact {
+    color: $color__contact;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.content {
+  height: $height__section_main;
+}
+
+.empty_state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  color: $color__title;
+  font-size: 30px;
+}
+
+.footer .center-aligned {
+  flex-direction: column;
+}

@@ -1,0 +1,16 @@
+//- First implementation where server rendered random position and font size
+//-
+  if words
+    each item in words
+      span(style={
+        "font-size": (item.total) * 10 + "px",
+        "position": "absolute",
+        "left": item.position.left,
+        "top": item.position.top
+      }).tagcloud-item= item.word
+  else
+    span.empty_state Oh no! No data, please provide a hashtag.. :-)
+
+//- New implementation passes data on to client for handling the rendering
+unless data
+  span.empty_state Oh no! No data, please provide a hashtag.. :-)
